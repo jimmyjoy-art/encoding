@@ -3,93 +3,41 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Quoted-Printable — Ultra Pro (Anvi)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quoted-Printable Encoder / Decoder</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="bg-gradient" aria-hidden="true"></div>
 
-    <header class="topbar">
-        <div class="brand">
-            <img src="" alt="" aria-hidden="true" class="brand-spark" />
-            <div>
-                <h1>Quoted-Printable Studio</h1>
-                <p class="subtitle">Ultra Pro — Aurora Edition · Built by Anvi</p>
+    <div class="container">
+        <div class="card">
+            <h1>Quoted-Printable Tool</h1>
+            <p class="sub">Ultra Professional Edition</p>
+
+            <label>Input</label>
+            <textarea id="input"></textarea>
+
+            <div class="btn-row">
+                <button id="encodeBtn">Encode</button>
+                <button id="decodeBtn">Decode</button>
+                <button id="clearBtn" class="danger">Clear</button>
             </div>
+
+            <label>Output</label>
+            <textarea id="output" readonly></textarea>
+
+            <div class="btn-row">
+                <button id="copyBtn" class="success">Copy</button>
+            </div>
+
         </div>
 
-        <div class="controls">
-            <button id="downloadBtn" title="Download output (Ctrl+Shift+S)">⬇ Download</button>
-            <button id="themeToggle" aria-pressed="false" title="Toggle theme">🌗</button>
-        </div>
-    </header>
-
-    <main class="stage">
-        <section class="card glass">
-            <div class="panel io-panel">
-                <label for="input">Input</label>
-                <textarea id="input" placeholder="Paste plain text or quoted-printable here..."></textarea>
-
-                <div class="row actions">
-                    <div class="left">
-                        <button id="encodeBtn" class="primary">Encode (Ctrl+E)</button>
-                        <button id="decodeBtn">Decode (Ctrl+D)</button>
-                        <button id="clearBtn" class="danger">Clear (Ctrl+L)</button>
-                    </div>
-
-                    <div class="right small-helpers">
-                        <button id="autoBtn" class="ghost" title="Toggle Auto-detect mode">Auto: <span id="autoState">ON</span></button>
-                        <div class="mini stat">Chars: <span id="inChars">0</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="panel out-panel">
-                <label for="output">Output</label>
-                <textarea id="output" readonly placeholder="Result will appear here..."></textarea>
-
-                <div class="row actions">
-                    <div class="left">
-                        <button id="copyBtn" class="success">Copy (Ctrl+C)</button>
-                        <button id="exportQPBtn">Export .qp</button>
-                    </div>
-
-                    <div class="right small-helpers">
-                        <div class="mini stat">Out Len: <span id="outLen">0</span></div>
-                        <div class="mini stat">Encode groups: <span id="eqCount">0</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="panel stats">
-                <div class="stat-col">
-                    <h4>Live Stats</h4>
-                    <ul>
-                        <li>Input chars: <strong id="statChars">0</strong></li>
-                        <li>Output length: <strong id="statOutLen">0</strong></li>
-                        <li>=XX groups: <strong id="statEq">0</strong></li>
-                        <li>Lines wrapped: <strong id="statLines">0</strong></li>
-                        <li>Last op (ms): <strong id="statTime">0</strong></li>
-                    </ul>
-                </div>
-
-                <div class="stat-col help">
-                    <h4>Tips</h4>
-                    <p>Auto mode detects “=XX” hex sequences and switches to decode automatically. Use <kbd>Ctrl+E</kbd>
-                        / <kbd>Ctrl+D</kbd> / <kbd>Ctrl+C</kbd> for power.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <small>© <span id="year"></span> Quoted-Printable Studio · Designed by Anvi · <em>Ultra Pro</em></small>
-    </footer>
-
-    <!-- Toasts -->
-    <div id="toast" aria-live="polite"></div>
+        <!-- Footer -->
+        <footer>
+            Created by <strong>Anvi Tech</strong>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
