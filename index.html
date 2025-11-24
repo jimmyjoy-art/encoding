@@ -1,23 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Quoted-Printable Encode/Decode</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quoted-Printable Encoder / Decoder</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>Quoted-Printable Encode / Decode Tool</h1>
+    <header>
+        <h1>Quoted-Printable Encode / Decode Tool</h1>
+        <button id="themeToggle">𝓓𝓱𝓪𝔂𝓪 🪐</button>
+    </header>
+<br>
+    <div class="container">
 
-  <div class="container">
-    <textarea id="input" placeholder="Enter your text here..."></textarea>
+        <div class="section">
+            <label>Input</label>
+            <textarea id="input" placeholder="Paste text or QP encoded text here..."></textarea>
 
-    <div class="buttons">
-      <button onclick="encodeQP()">Encode</button>
-      <button onclick="decodeQP()">Decode</button>
+            <div class="button-row">
+                <button onclick="encodeQP()">Encode</button>
+                <button onclick="decodeQP()">Decode</button>
+                <button onclick="clearText()">Clear</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <label>Output</label>
+
+            <textarea id="output" readonly></textarea>
+
+            <div class="button-row">
+                <button onclick="copyOutput()">Copy Output</button>
+            </div>
+        </div>
+
     </div>
 
-    <textarea id="output" placeholder="Output will appear here..."></textarea>
-  </div>
+    <footer>
+        <p>Built by Anvi using GitHub Pages • RFC 2045 Compliant</p>
+    </footer>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
