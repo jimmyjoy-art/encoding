@@ -4,43 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quoted-Printable Encoder / Decoder</title>
+    <title>Quoted-Printable Tool – Premium Edition</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Quoted-Printable Encode / Decode Tool</h1>
-        <button id="themeToggle">𝓓𝓱𝓪𝔂𝓪 🪐</button>
-    </header>
-<br>
-    <div class="container">
+
+    <div class="top-bar">
+        <h2>Quoted-Printable Encoder / Decoder</h2>
+        <button id="themeToggle">🌙</button>
+    </div>
+
+    <div class="glass-card">
 
         <div class="section">
             <label>Input</label>
-            <textarea id="input" placeholder="Paste text or QP encoded text here..."></textarea>
+            <textarea id="input" placeholder="Enter text or quoted-printable encoded string..."></textarea>
+        </div>
 
-            <div class="button-row">
-                <button onclick="encodeQP()">Encode</button>
-                <button onclick="decodeQP()">Decode</button>
-                <button onclick="clearText()">Clear</button>
-            </div>
+        <div class="button-row">
+            <button onclick="encodeQP()">Encode</button>
+            <button onclick="decodeQP()">Decode</button>
+            <button onclick="clearText()">Clear</button>
         </div>
 
         <div class="section">
             <label>Output</label>
-
             <textarea id="output" readonly></textarea>
+        </div>
 
-            <div class="button-row">
-                <button onclick="copyOutput()">Copy Output</button>
-            </div>
+        <div class="button-row">
+            <button onclick="copyOutput()">Copy Output</button>
         </div>
 
     </div>
 
     <footer>
-        <p>Built by Anvi using GitHub Pages • RFC 2045 Compliant</p>
+        <p>Premium QP Tool • Built with 💙 by Anvi</p>
     </footer>
 
     <script src="script.js"></script>
